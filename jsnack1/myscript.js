@@ -2,15 +2,14 @@
 
 const numberList = [];
 let sum = 0;
-let i = 0;
 
 while (sum < 50) {
-    let number = parseInt(prompt("Inserisci un numero"));
+    const number = parseInt(prompt("Inserisci un numero"));
 
     while (isNaN(number)) {
         number = parseInt(prompt("Inserisci un numero"));
     }
-    
+
     numberList.push(number);
     sum += number;
 }
