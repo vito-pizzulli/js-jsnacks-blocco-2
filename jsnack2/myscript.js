@@ -3,7 +3,6 @@ Ogni volta che sbaglia stampiamo in console un messaggio che gli/le dice se il n
 Una volta che ha indovinato, stampiamo in console il numero di tentativi totali. */
 
 const randomNumber = Math.floor((Math.random() * 100) + 1);
-console.log(randomNumber);
 let guesses = 1;
 let numberFound = false;
 
