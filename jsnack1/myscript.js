@@ -4,10 +4,10 @@ const numberList = [];
 let sum = 0;
 
 while (sum < 50) {
-    const number = parseInt(prompt("Inserisci un numero"));
+    let number = parseInt(prompt("Inserisci un numero:"));
 
     while (isNaN(number)) {
-        number = parseInt(prompt("Inserisci un numero"));
+        number = parseInt(prompt("Il numero inserito non è valido, inseriscilo nuovamente:"));
     }
 
     numberList.push(number);
