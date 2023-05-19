@@ -9,7 +9,7 @@ let numberFound = false;
 while (numberFound === false) {
     let userNumber = parseInt(prompt('Inserisci il tuo numero'));
 
-    while (isNaN(userNumber)) {
+    while ((isNaN(userNumber)) || (userNumber > 100)) {
     userNumber = parseInt(prompt('Hai inserito un valore non valido. Inserisci nuovamente il tuo numero.'));
     }
 
