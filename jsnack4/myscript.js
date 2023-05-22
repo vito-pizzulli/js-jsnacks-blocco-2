@@ -2,8 +2,8 @@
 Verificare tramite una funzione che le due parole abbiano la stessa lunghezza.
 Se hanno la stessa lunghezza, stamparle entrambe altrimenti stampare la più lunga delle due. */
 
-const firstWord = prompt("Inserisci la prima parola");
-const secondWord = prompt("Inserisci la secondaparola");
+const firstInput = prompt("Inserisci la prima parola");
+const secondInput = prompt("Inserisci la secondaparola");
 
 /**
  * This function checks if two words have the same length.
