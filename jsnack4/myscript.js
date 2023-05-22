@@ -3,7 +3,7 @@ Verificare tramite una funzione che le due parole abbiano la stessa lunghezza.
 Se hanno la stessa lunghezza, stamparle entrambe altrimenti stampare la più lunga delle due. */
 
 const firstInput = prompt("Inserisci la prima parola");
-const secondInput = prompt("Inserisci la secondaparola");
+const secondInput = prompt("Inserisci la seconda parola");
 
 /**
  * This function checks if two words have the same length.
@@ -20,8 +20,8 @@ function wordSameLenght(firstWord, secondWord) {
     }
 }
 
-if (wordSameLenght(firstWord, secondWord) === true) {
-    console.log(firstWord, secondWord);
-} else if (firstWord.length > secondWord.length) {
-    console.log(firstWord);
+if (wordSameLenght(firstInput, secondInput) === true) {
+    console.log(firstInput, secondInput);
+} else if (firstInput.length > secondInput.length) {
+    console.log(firstInput);
 }
