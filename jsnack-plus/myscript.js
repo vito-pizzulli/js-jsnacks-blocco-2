@@ -1,5 +1,3 @@
-
-
 function createLi () {
     const liElement = document.createElement('li');
     liElement.innerHTML = "Contenuto";
