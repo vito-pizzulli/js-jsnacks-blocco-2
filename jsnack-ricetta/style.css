@@ -54,3 +54,7 @@ li,
 label {
     font-size: 1.2rem;
 }
+
+#ingredients-list {
+    margin: 1rem 0;
+}
