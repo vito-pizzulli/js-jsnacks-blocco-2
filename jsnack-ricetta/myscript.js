@@ -29,10 +29,11 @@ addIngredientButton.addEventListener('click', function() {
 })
 
 imageCreateButton.addEventListener('click', function() {
-    ingredientListUl.innerHTML = " ";
+    container.innerHTML = "<h1>Generazione ricetta...</h1>";
     const timer = (ingredientsCounter * 1000 * 2);
+    const cleaningTimeout = setTimeout(elementCleaner, timer, container);
     const imageTimeout = setTimeout(imageGenerator, timer, 'https://source.unsplash.com/400x300/?meal', container);
-    const titleTimeout = setTimeout(addElement, timer, 'h2', 'Ricetta:', container);
+    const titleTimeout = setTimeout(addElement, timer, 'h1', 'Ricetta', container);
     const listTimeout = setTimeout(listGenerator, timer, ingredientList, container);
 })
 
@@ -74,4 +75,12 @@ function addElement(type, innerText, container) {
     type = document.createElement(type);
     type.innerHTML = innerText;
     container.append(type);
+}
+
+/**This function empties the HTML of the selected element.
+ * 
+ * @param {*} element The element you want to clean.
+ */
+function elementCleaner(element) {
+    element.innerHTML = "";
 }
