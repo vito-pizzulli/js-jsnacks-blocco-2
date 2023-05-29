@@ -28,10 +28,21 @@ Generare casualmente le statistiche di gioco, secondo queste regole:
 
     console.log(basketPlayer);
 
+    /**
+     * This function returns a random integer number from min to max, based on the set parameters.
+     * @param {*} min The smallest possible random integer.
+     * @param {*} max The biggest possible random integer.
+     * @returns A random integer in the set range.
+     */
     function getRandomInteger(min, max) {
         return Math.floor(Math.random() * max) + min;
     }
 
+
+    /**
+     * This function returns a random capital letter from all alphabet.
+     * @returns A random capital letter.
+     */
     function getRandomLetter() {
         const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
             return alphabet[Math.floor(Math.random() * alphabet.length)];
