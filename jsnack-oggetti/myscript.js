@@ -16,7 +16,7 @@ Generare casualmente le statistiche di gioco, secondo queste regole:
     i tiri sono un numero intero compreso tra 20 e 100 */
 
     const basketPlayer = {
-        'codice-giocatore': getRandomLetter() + getRandomLetter() + getRandomLetter() + getRandomInteger(0, 9) + getRandomInteger(0, 9) + getRandomInteger(0, 9),
+        'codice-giocatore': get3RandomLetters() + getRandomInteger(0, 9) + getRandomInteger(0, 9) + getRandomInteger(0, 9),
         nome: 'Mario',
         cognome: 'Rossi',
         età: '23',
@@ -40,10 +40,10 @@ Generare casualmente le statistiche di gioco, secondo queste regole:
 
 
     /**
-     * This function returns a random capital letter from all alphabet.
-     * @returns A random capital letter.
+     * This function returns 3 random capital letters from all alphabet.
+     * @returns 3 random capital letters.
      */
-    function getRandomLetter() {
+    function get3RandomLetters() {
         const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-            return alphabet[Math.floor(Math.random() * alphabet.length)];
+            return alphabet[Math.floor(Math.random() * alphabet.length)] + alphabet[Math.floor(Math.random() * alphabet.length)] + alphabet[Math.floor(Math.random() * alphabet.length)];
     }
