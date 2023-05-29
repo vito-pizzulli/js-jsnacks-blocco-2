@@ -3,63 +3,36 @@
 Bonus:
 Crea un peperone con una funzione. */
 
-const peperoni = [
-    {
-        varietà: 'Pontecorvo',
-        'peso-gr': 120,
-        'lunghezza-cm': 10
-    },
-    {
-        varietà: 'Carmagnola',
-        'peso-gr': 90,
-        'lunghezza-cm': 5
-    },
-    {
-        varietà: 'Senise',
-        'peso-gr': 80,
-        'lunghezza-cm': 2
-    },
-    {
-        varietà: 'Quadrato di Asti',
-        'peso-gr': 30,
-        'lunghezza-cm': 3
-    },
-    {
-        varietà: 'Capriglio',
-        'peso-gr': 15,
-        'lunghezza-cm': 8
-    },
-    {
-        varietà: 'Papaccella napoletana',
-        'peso-gr': 35,
-        'lunghezza-cm': 4
-    },
-    {
-        varietà: 'Friggitello Torricello',
-        'peso-gr': 55,
-        'lunghezza-cm': 7
-    },
-    {
-        varietà: 'Dolce di Altino',
-        'peso-gr': 50,
-        'lunghezza-cm': 2
-    },
-    {
-        varietà: 'Polizzi Generosa',
-        'peso-gr': 40,
-        'lunghezza-cm': 3
-    },
-    {
-        varietà: 'Cappello del Vescovo',
-        'peso-gr': 110,
-        'lunghezza-cm': 1
-    }
-]
+const peperoni = [];
+
+for (let i = 0; i < 10; i++) {
+    const peperone = generaPeperone();
+    peperoni.push(peperone);
+}
 
 let pesoTotale = 0;
 for (let i = 0; i < peperoni.length; i++) {
-    const pesoPeperone = peperoni[i]['peso-gr'];
-    pesoTotale = pesoTotale + pesoPeperone;
+    const pesoPeperone = peperoni[i].peso;
+    pesoTotale += pesoPeperone;
 }
 
+console.log(peperoni);
 console.log('Il peso totale dei peperoni è ' + pesoTotale + '.');
+
+/**
+ * This function generate an object of a random pepper, with a random variety, weight and length.
+ * @returns An object with 3 random properties.
+ */
+function generaPeperone () {
+    const listaVarietà = ['Pontecorvo', 'Carmagnola', 'Senise', 'Quadrato di Asti', 'Capriglio', 'Papaccella napoletana', 'Friggitello Torricello', 'Dolce di Altino', 'Polizzi Generosa', 'Cappello del Vescovo'];
+    const indiceVarietà = Math.floor(Math.random() * listaVarietà.length);
+    const varietà = listaVarietà[indiceVarietà];
+    const peso = Math.floor(Math.random() * 100) + 5;
+    const lunghezza = Math.floor(Math.random() * 100) + 5;
+    const peperone = {
+        varietà: varietà,
+        peso: peso,
+        lunghezza: lunghezza
+    }
+    return peperone;
+}
