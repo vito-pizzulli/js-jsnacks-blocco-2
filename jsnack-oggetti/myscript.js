@@ -20,10 +20,14 @@ Generare casualmente le statistiche di gioco, secondo queste regole:
         nome: 'Mario',
         cognome: 'Rossi',
         età: '23',
-        'media-punti-partita': '25',
-        'percentuale-tiri-3-punti': '51',
-        stoppate: '20',
-        tiri: '41'
+        'media-punti-partita': getRandomInteger(0, 50),
+        'percentuale-tiri-3-punti': getRandomInteger(0, 100),
+        stoppate: getRandomInteger(0, 30),
+        tiri: getRandomInteger(20, 100)
     };
 
     console.log(basketPlayer);
+
+    function getRandomInteger(min, max) {
+        return Math.floor(Math.random() * max) + min;
+    }
