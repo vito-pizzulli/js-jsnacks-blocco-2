@@ -116,3 +116,9 @@ automobili.forEach(automobile => {
 })
 
 console.log(automobiliDiesel);
+
+
+/* Terzo array il resto delle auto, array.filter */
+automobiliResto = automobili.filter(automobile => (automobile.alimentazione !== 'Benzina') && (automobile.alimentazione !== 'Diesel'));
+
+console.log(automobiliResto);
