@@ -96,7 +96,7 @@ console.log(automobili);
 /* Primo array solo le auto a benzina, ciclo for */
 let automobiliBenzina = [];
 
-for (i = 0; i < automobili.length; i++) {
+for (let i = 0; i < automobili.length; i++) {
 
     if (automobili[i].alimentazione === 'Benzina') {;
     automobiliBenzina.push(automobili[i]);
