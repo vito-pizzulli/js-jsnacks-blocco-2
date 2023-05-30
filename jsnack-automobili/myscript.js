@@ -93,7 +93,7 @@ automobili = [
 
 console.log(automobili);
 
-/* Primo array solo le auto a benzina,  ciclo for */
+/* Primo array solo le auto a benzina, ciclo for */
 let automobiliBenzina = [];
 
 for (i = 0; i < automobili.length; i++) {
@@ -104,3 +104,15 @@ for (i = 0; i < automobili.length; i++) {
 }
 
 console.log(automobiliBenzina);
+
+
+/* Secondo solo le auto a diesel, ciclo foreach */
+let automobiliDiesel = [];
+
+automobili.forEach(automobile => {
+    if (automobile.alimentazione === 'Diesel') {
+        automobiliDiesel.push(automobile);
+    }
+})
+
+console.log(automobiliDiesel);
