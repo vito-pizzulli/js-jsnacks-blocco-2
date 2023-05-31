@@ -2,18 +2,9 @@
 
 Es: ['pippo', 'PLUTO', 'PapERino'] => ['Pippo', 'Pluto', 'Paperino'] */
 
-/* Array di partenza */
-
 const words = ['CHIARA', 'matTeo', 'vito', 'VALEntina', 'MArco', 'RiCCardO', 'giovanni', 'Nicole', 'SAveRIo', 'antoNELLA'];
 
-/* 1° Step - Trasformo le stringhe dell'array mettendo tutte le lettere minuscole. */
+let wordsConverted = [];
+words.forEach(word => wordsConverted.push(word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()));
 
-let wordsLowercase = [];
-words.forEach(word => wordsLowercase.push(word.toLowerCase()));
-
-/* 2° Step - Trasformo le stringhe dell'array mettendo solo la prima lettera maiuscola. */
-
-let wordsFirstCapital = [];
-wordsLowercase.forEach(word => wordsFirstCapital.push(word.charAt(0).toUpperCase() + word.slice(1)));
-
-console.log(words, wordsLowercase, wordsFirstCapital);
+console.log(words, wordsConverted);
